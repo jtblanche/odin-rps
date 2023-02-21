@@ -11,6 +11,7 @@ function getComputerChoice() {
 }
 
 function playRound(playerChoice, computerChoice) {
+  getComputerChoice();
   playerChoice = prompt("Rock, Paper, or Scissors?").toLowerCase();
   if (playerChoice === computerChoice) {
     return "It's a draw!";
@@ -29,5 +30,6 @@ function playRound(playerChoice, computerChoice) {
   }
 }
 
-getComputerChoice();
-playRound();
+const playerChoice = "";
+const computerChoice = getComputerChoice();
+console.log(playRound(playerChoice, computerChoice));
