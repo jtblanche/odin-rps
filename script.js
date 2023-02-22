@@ -25,12 +25,14 @@ function playRound(playerChoice, computerChoice) {
     (playerChoice === "paper" && computerChoice === "rock") ||
     (playerChoice === "scissors" && computerChoice === "paper")
   ) {
+    playerScore++;
     return `You win this round - ${playerChoice} beats ${computerChoice}!`;
   } else if (
     (playerChoice === "rock" && computerChoice === "paper") ||
     (playerChoice === "paper" && computerChoice === "scissors") ||
     (playerChoice === "scissors" && computerChoice === "rock")
   ) {
+    computerScore++;
     return `You lose this round - ${playerChoice} is beaten by ${computerChoice}!`;
   }
 }
