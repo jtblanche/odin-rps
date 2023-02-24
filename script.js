@@ -1,5 +1,5 @@
-let playerChoice = "";
-let computerChoice = "";
+// let playerChoice = "";
+// let computerChoice = "";
 let playerScore = 0;
 let computerScore = 0;
 
