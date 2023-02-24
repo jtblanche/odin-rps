@@ -4,8 +4,6 @@ My own Rock, Paper, Scissors game from scratch!
 
 **Link to project:** Live link coming soon
 
-![alt tag](http://placecorgi.com/1200/650)
-
 ## How It's Made:
 
 **Tech used:** HTML, CSS, JavaScript
