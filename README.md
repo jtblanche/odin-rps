@@ -2,7 +2,7 @@
 
 My own Rock, Paper, Scissors game from scratch!
 
-**Link to project:** Live link coming soon
+**Link to project:** Link coming soon
 
 ## How It's Made:
 
