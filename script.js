@@ -1,5 +1,5 @@
-// let playerChoice = "";
-// let computerChoice = "";
+let playerChoice = "";
+let computerChoice = "";
 let playerScore = 0;
 let computerScore = 0;
 
@@ -47,9 +47,10 @@ function game() {
       return `Tie game! Final score - Player: ${playerScore}  Computer: ${computerScore}`;
     }
   }
-  for (let i = 0; i < 5; i++) {
-    console.log(playRound());
-  }
+  // PLAY ONLY 5 ROUNDS
+  // for (let i = 0; i < 5; i++) {
+  //   console.log(playRound());
+  // }
   console.log(winner());
 }
 
