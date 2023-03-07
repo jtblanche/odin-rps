@@ -8,7 +8,7 @@ My own Rock, Paper, Scissors game from scratch!
 
 **Tech used:** HTML, CSS, JavaScript
 
-I used this as my first project to really tie together my HTML, CSS, and JavaScript skills together for the first time. As someone who is switching industries and self-taught, there was a steep learning curve. I had to seriously debug things for the first time and it was incredibly satisfying to solve problems in my own code.
+I used this as my first project to really tie my HTML, CSS, and JavaScript skills together for the first time. As someone who is switching industries and self-taught, there was a steep learning curve. I had to seriously debug things for the first time and it was incredibly satisfying to solve problems in my own code.
 
 ## Optimizations
 
