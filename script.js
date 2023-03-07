@@ -1,7 +1,6 @@
-let playerChoice = "";
-let computerChoice = "";
 let playerScore = 0;
 let computerScore = 0;
+let playerChoice;
 
 function getComputerChoice() {
   let computerChoice = Math.floor(Math.random() * 3);
@@ -15,31 +14,43 @@ function getComputerChoice() {
   return computerChoice;
 }
 
-function playRound(playerChoice, computerChoice) {
-  playerChoice = prompt("Rock, Paper, or Scissors?").toLowerCase();
-  computerChoice = getComputerChoice();
+const buttons = document.querySelectorAll(".buttons button");
+buttons.forEach((buttons) => buttons.addEventListener("click", processClick));
+
+function processClick() {
+  playerChoice = this.id;
+  playRound();
+}
+
+function playRound() {
+  if (!playerChoice) {
+    return;
+  }
+  let computerChoice = getComputerChoice();
   if (playerChoice === computerChoice) {
-    return `It's a tie - you both chose ${playerChoice}! Player: ${playerScore}  Computer: ${computerScore}`;
+    console.log(
+      `It's a tie - you both chose ${playerChoice}! Player: ${playerScore}  Computer: ${computerScore}`
+    );
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "paper" && computerChoice === "rock") ||
     (playerChoice === "scissors" && computerChoice === "paper")
   ) {
     playerScore++;
-    return `You win this round - ${playerChoice} beats ${computerChoice}! Player: ${playerScore}  Computer: ${computerScore}`;
+    console.log(
+      `You win this round - ${playerChoice} beats ${computerChoice}! Player: ${playerScore}  Computer: ${computerScore}`
+    );
   } else if (
     (playerChoice === "rock" && computerChoice === "paper") ||
     (playerChoice === "paper" && computerChoice === "scissors") ||
     (playerChoice === "scissors" && computerChoice === "rock")
   ) {
     computerScore++;
-    return `You lose this round - ${playerChoice} is beaten by ${computerChoice}! Player: ${playerScore}  Computer: ${computerScore}`;
+    console.log(
+      `You lose this round - ${playerChoice} is beaten by ${computerChoice}! Player: ${playerScore}  Computer: ${computerScore}`
+    );
   }
 }
-
-document.getElementById("rock-btn").addEventListener("click", playRound);
-document.getElementById("paper-btn").addEventListener("click", playRound);
-document.getElementById("scissors-btn").addEventListener("click", playRound);
 
 // function game() {
 //   function winner() {
