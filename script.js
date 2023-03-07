@@ -37,21 +37,24 @@ function playRound(playerChoice, computerChoice) {
   }
 }
 
-function game() {
-  function winner() {
-    if (playerScore > computerScore) {
-      return `You win! Final score - Player: ${playerScore}  Computer: ${computerScore}`;
-    } else if (playerScore < computerScore) {
-      return `You lose! Final score - Player: ${playerScore}  Computer: ${computerScore}`;
-    } else {
-      return `Tie game! Final score - Player: ${playerScore}  Computer: ${computerScore}`;
-    }
-  }
-  // PLAY ONLY 5 ROUNDS
-  // for (let i = 0; i < 5; i++) {
-  //   console.log(playRound());
-  // }
-  console.log(winner());
-}
+document.getElementById("rock-btn").addEventListener("click", playRound);
+document.getElementById("paper-btn").addEventListener("click", playRound);
+document.getElementById("scissors-btn").addEventListener("click", playRound);
 
-game();
+// function game() {
+//   function winner() {
+//     if (playerScore > computerScore) {
+//       return `You win! Final score - Player: ${playerScore}  Computer: ${computerScore}`;
+//     } else if (playerScore < computerScore) {
+//       return `You lose! Final score - Player: ${playerScore}  Computer: ${computerScore}`;
+//     } else {
+//       return `Tie game! Final score - Player: ${playerScore}  Computer: ${computerScore}`;
+//     }
+//   }
+//   for (let i = 0; i < 5; i++) {
+//     console.log(playRound());
+//   }
+//   console.log(winner());
+// }
+
+// game();
