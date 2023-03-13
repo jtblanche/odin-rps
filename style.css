@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400;800&display=swap");
+
 *,
 *::before,
 *::after {
@@ -8,8 +10,17 @@
   margin: 0;
 }
 
+:root {
+  --blue: #13688a;
+  --lblue: #9bddff;
+  --silver: #e6f4f1;
+  --orange: #ed982a;
+  --cream: #ffebcd;
+  --brown: #8d7257;
+}
+
 body {
-  line-height: 1.5;
+  font-family: "Sen", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
