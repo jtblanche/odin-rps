@@ -8,46 +8,51 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <section class="hero-container">
-      <div id="hero">
-        <h1>Rock,<br />Paper,<br />Scissors.</h1>
+    <div class="page-container">
+      <div class="content-wrap">
+        <section class="hero-container">
+          <div class="hero">
+            <h1>Rock,<br />Paper,<br />Scissors.</h1>
+          </div>
+        </section>
+        <section class="rules-container">
+          <div class="rules">
+            <h3>
+              Play this
+              <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors"
+                >classic game</a
+              >
+              against a computer opponent. First to score 5 points wins!
+            </h3>
+            <p>Click the respective button to make your choice.</p>
+          </div>
+        </section>
+        <section class="buttons-container">
+          <div class="buttons">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+          </div>
+        </section>
+        <section class="scores-container">
+          <div class="scores">
+            <div id="player-score"><h4>#playerscore</h4></div>
+            <div id="computer-score"><h4>#computerscore</h4></div>
+            <div class="results-text">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </div>
+          <div class="refresh"><button id="reset">Reset</button></div>
+        </section>
       </div>
-    </section>
-    <section class="rules-container">
-      <div class="rules">
-        <h3>
-          Play this
-          <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors"
-            >classic game</a
-          >
-          against a computer opponent. First to score 5 points wins!
-        </h3>
-        <p>Click the respective button to make your choice.</p>
-      </div>
-    </section>
-    <section class="buttons-container">
-      <div class="buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-      </div>
-    </section>
-    <section class="scores-container">
-      <div class="scores">
-        <div id="player-score"><h4>#</h4></div>
-        <div id="computer-score"><h4>#</h4></div>
-        <div class="results-text">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <section class="footer-container">
+        <div class="footer">
+          <div class="footer-text">
+            Rock Paper Scissors Project © 2023 David Wiese
+          </div>
         </div>
-      </div>
-      <div class="refresh"><button id="reset">Reset</button></div>
-    </section>
-    <section class="footer-container">
-      <div class="footer">
-        <p>Rock Paper Scissors Project © 2023 David Wiese</p>
-      </div>
-    </section>
-
+      </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
