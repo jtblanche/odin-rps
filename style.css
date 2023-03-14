@@ -11,6 +11,7 @@
 }
 
 :root {
+  --body-bg: black;
   --gradient: linear-gradient(
     90deg,
     #845ec2,
@@ -25,7 +26,6 @@
 .page-container {
   position: relative;
   min-height: 100vh;
-  /* background-color: black; */
 }
 
 .content-wrap {
@@ -35,7 +35,7 @@
 body {
   font-family: "Sen", sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: black;
+  background-color: var(--body-bg);
 }
 
 img,
@@ -65,12 +65,13 @@ h6 {
 }
 
 .hero-container {
-  background-color: black;
+  background-color: var(--body-bg);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 400px;
+  padding: 1rem 0 3rem 0;
 }
 
 .hero {
@@ -102,15 +103,44 @@ h1 {
 }
 
 .rules-container {
+  --spike-width: 50px;
+  --spike-height: 15px;
+  --spike-color: var(--body-bg);
+
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 250px;
+  min-height: 350px;
   background-image: linear-gradient(90deg, #ff9671, #ffc75f, #f9f871);
+}
+
+.rules-container::before,
+.rules-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: var(--spike-height);
+  background: var(--spike-color);
+  -webkit-mask-image: url("assets/triangle.svg");
+  -webkit-mask-size: var(--spike-width) var(--spike-height);
+  mask-image: url("assets/triangle.svg");
+  mask-size: var(--spike-width) var(--spike-height);
+}
+
+.rules-container::before {
+  top: 0;
+}
+
+.rules-container::after {
+  bottom: 0;
+  transform: rotate(0.5turn);
 }
 
 .rules {
   width: 80%;
+  text-align: center;
+  line-height: 4rem;
 }
 
 a:link {
@@ -128,7 +158,7 @@ a:hover {
 }
 
 .buttons-container {
-  background-color: black;
+  background-color: var(--body-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,7 +201,7 @@ a:hover {
   bottom: 0;
   width: 100%;
   height: 1.5rem;
-  background-color: black;
+  background-color: var(--body-bg);
 }
 
 .footer {
