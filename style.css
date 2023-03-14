@@ -17,6 +17,15 @@
   --orange: #ed982a;
   --cream: #ffebcd80;
   --brown: #8d7257;
+  --gradient: linear-gradient(
+    90deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc75f,
+    #f9f871
+  );
 }
 
 .page-container {
@@ -31,6 +40,7 @@
 body {
   font-family: "Sen", sans-serif;
   -webkit-font-smoothing: antialiased;
+  /* background-color: black; */
 }
 
 img,
@@ -75,6 +85,14 @@ h6 {
 h1 {
   line-height: 1.3;
   font-size: 96px;
+  width: 50%;
+}
+
+.gradient-text {
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .rules-container {
