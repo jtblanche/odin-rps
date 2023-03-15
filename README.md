@@ -12,7 +12,7 @@ I used this as my first project to really tie my HTML, CSS, and JavaScript skill
 
 ## Optimizations
 
-Because this was my first real project, I'm sure there is some hacky code. I tried my best to have meaningful commit messages and descriptive, maintainable, readable code. The logic I used and how I named the variables was sort of the first path I went down. At one point when I was stuck, I thought I might start from scratch but was able to work out what was happening.
+I plan to make this mobile responsive by stacking the RPS buttons in a column and shrinking the hero font on mobile aspect ratios.
 
 ## Lessons Learned:
 
