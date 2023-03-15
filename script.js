@@ -22,6 +22,20 @@ function processClick() {
   playRound();
 }
 
+const reset = document.querySelector(".reset-button");
+reset.addEventListener("click", resetGame);
+
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  playerChoice = null;
+  document.getElementById("c-score").innerHTML = computerScore;
+  document.getElementById("p-score").innerHTML = playerScore;
+  document.getElementById(
+    "results-text"
+  ).innerHTML = `Make your choice to start the game.`;
+}
+
 function playRound() {
   if (!playerChoice) {
     return;
@@ -31,7 +45,6 @@ function playRound() {
     document.getElementById(
       "results-text"
     ).innerHTML = `It's a tie - you both chose ${playerChoice}!`;
-    // console.log(`It's a tie - you both chose ${playerChoice}!`);
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "paper" && computerChoice === "rock") ||
@@ -41,8 +54,6 @@ function playRound() {
     document.getElementById(
       "results-text"
     ).innerHTML = `You win this round - ${playerChoice} beats ${computerChoice}!`;
-    // console.log(
-    // `You win this round - ${playerChoice} beats ${computerChoice}!`
   } else if (
     (playerChoice === "rock" && computerChoice === "paper") ||
     (playerChoice === "paper" && computerChoice === "scissors") ||
@@ -52,8 +63,6 @@ function playRound() {
     document.getElementById(
       "results-text"
     ).innerHTML = `You lose this round - ${playerChoice} is beaten by ${computerChoice}!`;
-    // console.log(
-    //   `You lose this round - ${playerChoice} is beaten by ${computerChoice}!`
   }
   document.getElementById("c-score").innerHTML = computerScore;
   document.getElementById("p-score").innerHTML = playerScore;
