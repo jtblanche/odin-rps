@@ -29,20 +29,30 @@
         </section>
         <section class="buttons-container">
           <div class="buttons">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissors">Scissors</button>
+            <button class="button" type="button" id="rock">Rock</button>
+            <button class="button" type="button" id="paper">Paper</button>
+            <button class="button" type="button" id="scissors">Scissors</button>
           </div>
         </section>
         <section class="scores-container">
           <div class="scores">
-            <div id="player-score"><h4>#playerscore</h4></div>
-            <div id="computer-score"><h4>#computerscore</h4></div>
-            <div class="results-text">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="inner-score">
+              <div id="player-score"><h4>0</h4></div>
+              <div class="player-text"><p>You</p></div>
+            </div>
+            <div class="inner-score">
+              <div id="computer-score"><h4>0</h4></div>
+              <div class="computer-text">Computer</div>
             </div>
           </div>
-          <div class="refresh"><button id="reset">Reset</button></div>
+          <div class="results">
+            <p class="results-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+          </div>
+          <div class="refresh">
+            <button class="reset-button" type="button" id="reset">Reset</button>
+          </div>
         </section>
       </div>
       <section class="footer-container">
