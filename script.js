@@ -28,9 +28,7 @@ function playRound() {
   }
   let computerChoice = getComputerChoice();
   if (playerChoice === computerChoice) {
-    console.log(
-      `It's a tie - you both chose ${playerChoice}! Player: ${playerScore}  Computer: ${computerScore}`
-    );
+    console.log(`It's a tie - you both chose ${playerChoice}!`);
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "paper" && computerChoice === "rock") ||
@@ -38,7 +36,7 @@ function playRound() {
   ) {
     playerScore++;
     console.log(
-      `You win this round - ${playerChoice} beats ${computerChoice}! Player: ${playerScore}  Computer: ${computerScore}`
+      `You win this round - ${playerChoice} beats ${computerChoice}!`
     );
   } else if (
     (playerChoice === "rock" && computerChoice === "paper") ||
@@ -47,9 +45,11 @@ function playRound() {
   ) {
     computerScore++;
     console.log(
-      `You lose this round - ${playerChoice} is beaten by ${computerChoice}! Player: ${playerScore}  Computer: ${computerScore}`
+      `You lose this round - ${playerChoice} is beaten by ${computerChoice}!`
     );
   }
+  document.getElementById("c-score").innerHTML = computerScore;
+  document.getElementById("p-score").innerHTML = playerScore;
 }
 
 // function game() {
