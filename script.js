@@ -34,6 +34,10 @@ function resetGame() {
   document.getElementById(
     "results-text"
   ).innerHTML = `Make your choice to start the game.`;
+  buttons.forEach((button) => {
+    button.addEventListener("click", processClick);
+    button.disabled = false;
+  });
 }
 
 function playRound() {
@@ -66,7 +70,20 @@ function playRound() {
   }
   document.getElementById("c-score").innerHTML = computerScore;
   document.getElementById("p-score").innerHTML = playerScore;
-}
 
-// add logic where game ends at 5 with a win/lose message
-// add reset button logic
+  if (playerScore === 5 || computerScore === 5) {
+    if (playerScore === 5) {
+      document.getElementById(
+        "results-text"
+      ).innerHTML = `You won! Press reset to play again.`;
+    } else {
+      document.getElementById(
+        "results-text"
+      ).innerHTML = `You lost! press reset to play again.`;
+    }
+    buttons.forEach((button) => {
+      button.removeEventListener("click", processClick);
+      button.disabled = true;
+    });
+  }
+}
