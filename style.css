@@ -111,7 +111,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 350px;
+  min-height: 250px;
   background-image: linear-gradient(90deg, #ff9671, #ffc75f, #f9f871);
 }
 
@@ -173,6 +173,7 @@ a:hover {
 }
 
 .buttons {
+  margin-top: 1.5rem;
   display: flex;
   gap: 2rem;
 }
@@ -274,7 +275,7 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 250px;
+  min-height: 300px;
   /* Mask created with https://css-generators.com/wavy-shapes/ */
   --mask: radial-gradient(55.9px at 50% 75px, #000 99%, #0000 101%)
       calc(50% - 50px) 0/100px 51% repeat-x,
@@ -307,7 +308,20 @@ a:hover {
 }
 
 .results {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.reset-button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
 }
 
 .footer-container {
